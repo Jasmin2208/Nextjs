@@ -17,7 +17,7 @@ function ProductList() {
     return (
         <>
             <div>
-                <h1>Product List</h1>
+                <h1 className='heading'>Product List</h1>
             </div>
             {product?.map((p) => {
               return  <div>

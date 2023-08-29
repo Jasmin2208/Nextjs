@@ -4,7 +4,7 @@ import React from 'react'
 function About() {
     return (
         <>
-            <div>About Page</div>
+            <div className='heading'>About Page</div>
             <br />
             <br />
             <Link href="/">Go to home page</Link>

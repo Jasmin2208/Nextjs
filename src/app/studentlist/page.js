@@ -5,7 +5,7 @@ function StudentList() {
     const studentsName = ["jasmin", "ajay", "vraj", "happy"]
     return (
         <div>
-            <h1>Student List</h1>
+            <h1 className='heading'>Student List</h1>
             <ul>
                 {
                     studentsName.map((student) => {

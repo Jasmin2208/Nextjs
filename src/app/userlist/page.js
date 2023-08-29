@@ -12,9 +12,9 @@ async function UserList() {
 
     return (
         <>
-            <div>User List</div>
+            <div className='heading'>User List</div>
             {users.map((u) => {
-                return <div style={{ marginBottom: "15px", backgroundColor: "orange", color: "black", padding: "5px" }}>
+                return <div style={{ marginBottom: "15px", backgroundColor: "orange", color: "black", padding: "5px", width:"30rem", borderRadius:"15px" }}>
                     <h4>Name: {u.firstName} {u.lastName}</h4>
                     <h5>Age: {u.age}</h5>
                     <h5>Gender: {u.gender}</h5>

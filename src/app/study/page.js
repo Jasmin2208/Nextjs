@@ -1,6 +1,6 @@
 function Study() {
   return (
-    <div>Study</div>
+    <div className='heading'>Study</div>
   )
 }
 
