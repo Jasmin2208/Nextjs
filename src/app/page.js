@@ -1,9 +1,10 @@
 'use client'
 import { useState } from 'react'
-import styles from './page.module.css'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-
+import custom from './custom.module.css'
+import other from  './other.module.css'
+import outside from './style/outside.module.css'
 
 export default function Home() {
   const router = useRouter()
@@ -20,17 +21,17 @@ export default function Home() {
     <>
       <main>
         <User name={name} />
-        <h1>My Name Is {name}</h1>
-        <Link href="/login">Go to Link Page</Link>
+        <h1 className={custom.main}>My Name Is {name}</h1>
+        <Link href="/login" className={other.main}>Go to Link Page</Link>
         <br />
         <br />
-        <Link href="/productlist">Go to Product List Page</Link>
+        <Link href="/productlist" className={other.main}>Go to Product List Page</Link>
         <br />
         <br />
-        <Link href="/userlist">Go to User List Page</Link>
+        <Link href="/userlist" className={other.main}>Go to User List Page</Link>
         <br />
         <br />
-        <Link href="/about">Go to About Page</Link>
+        <Link href="/about" className={outside.main}>Go to About Page</Link>
         <br />
         <br />
         <button onClick={() => navigate("/login")}>Go to Link Page</button>

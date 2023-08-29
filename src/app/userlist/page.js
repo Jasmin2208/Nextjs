@@ -1,5 +1,7 @@
 import React from 'react'
 import User from './user'
+import outside from '../style/outside.module.css'
+
 
 const fetchData = async () => {
     let data = await fetch("https://dummyjson.com/users")
@@ -19,7 +21,7 @@ async function UserList() {
                     <h5>Age: {u.age}</h5>
                     <h5>Gender: {u.gender}</h5>
                     <h5>Email: {u.email}</h5>
-                    <h5>Phone: {u.phone}</h5>
+                    <h5 className={outside.main}>Phone: {u.phone}</h5>
                     <User name={`${u.firstName} ${u.lastName}`} />
                 </div>
             })}
