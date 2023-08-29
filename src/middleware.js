@@ -7,4 +7,13 @@ function middleware(request) {
     }
 }
 
+export const config = {
+
+    //For single URL  path
+    // matcher: "/about/:path*"
+
+    //For multiple URL path
+    matcher: ["/about/:path*", "/studentlist/:path*"]
+}
+
 export default middleware
