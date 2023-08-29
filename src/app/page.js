@@ -26,7 +26,7 @@ export default function Home() {
         <Image src={logo} />
         <br />
         <br />
-        <Image src={"https://img.freepik.com/free-photo/vestrahorn-mountains-stokksnes-iceland_335224-667.jpg?w=1380&t=st=1693310202~exp=1693310802~hmac=4ecf11e9ffc3393c8553e857283d613d0bf308d520aa70394e20bd2d587cc291"} width={100} height={100} />
+        <Image src={"https://img.freepik.com/free-photo/vestrahorn-mountains-stokksnes-iceland_335224-667.jpg?w=1380&t=st=1693310202~exp=1693310802~hmac=4ecf11e9ffc3393c8553e857283d613d0bf308d520aa70394e20bd2d587cc291"} width={300} height={300} />
         <User name={name} color={color}/>
         <h1 className={custom.main}>My Name Is {name}</h1>
         <Link href="/login" className={other.main}>Go to Link Page</Link>
