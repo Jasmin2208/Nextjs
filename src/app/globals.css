@@ -117,6 +117,7 @@ a {
 .userDeatil{
   background-color: chartreuse;
   font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
   text-align: justify;
   font-size: 20px;
   width: 30rem;
