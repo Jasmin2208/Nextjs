@@ -21,4 +21,12 @@ async function UserDetail(props) {
     )
 }
 
+export async function generateStaticParams() {
+    const getUserList = getUsers();
+    const { users } = await getUserList;
+    return users.map(user => ({
+        userId: user.id.toString()
+    }))
+}
+
 export default UserDetail

@@ -14,7 +14,7 @@ async function User() {
             <div>
                 {
                     users.map((user) => {
-                        return <div>
+                        return <div key={user.id}>
                                     <Link href={`/user/${user.id}`}>{user.firstName} {user.lastName}</Link>
                                </div>
                     })
