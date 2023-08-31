@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <h5><Link href='/'>Home page</Link></h5>
         <h5><Link href='/api/hello'>Hello page</Link></h5>
+        <h5><Link href='/api/user'>User page</Link></h5>
         <br />
         <br />
         {children}
