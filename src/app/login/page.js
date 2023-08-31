@@ -11,4 +11,11 @@ function Login() {
     )
 }
 
+export function generateMetadata() {
+    return {
+        title: "Login page",
+        description: "This is login page"
+    }
+}
+
 export default Login
