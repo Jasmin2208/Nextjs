@@ -1,0 +1,1 @@
+export const API_BASE_URL =  process.env.NODE_ENV == 'development' ? "localhost:3000" : "www.api.production.com"
