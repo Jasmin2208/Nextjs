@@ -9,7 +9,7 @@ export async function GET(request) {
 export async function POST(request) {
     const payload = await request.json()
     if (!payload.name || !payload.age || !payload.gender) {
-        return NextResponse.json({ result: "Required Feild Not Found !!" })
+        return NextResponse.json({ result: "Required Feild Not Found !!", error: true })
     }
-    return NextResponse.json({ result: "hello", data: payload })
+    return NextResponse.json({ result: "User Create Successfully !", data: payload, error: false })
 }
