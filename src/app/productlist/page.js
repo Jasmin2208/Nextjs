@@ -1,4 +1,5 @@
 'use client'
+import Script from 'next/script'
 import { useEffect, useState } from 'react'
 
 function ProductList() {
@@ -16,11 +17,17 @@ function ProductList() {
 
     return (
         <>
+            <Script
+                src='/location.js'
+                onLoad={() => {
+                    console.log("file loaded");
+                }}
+            />
             <div>
                 <h1 className='heading'>Product List</h1>
             </div>
             {product?.map((p) => {
-              return  <div>
+                return <div>
                     <h1>Name : {p.title}</h1>
                     <p>Description: {p.description}</p>
                     <p>Price: <span style={{ color: "green", fontWeight: "700" }}> {p.price} $</span></p>
