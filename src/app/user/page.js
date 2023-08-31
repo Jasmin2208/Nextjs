@@ -6,7 +6,6 @@ import Link from 'next/link';
 async function User() {
     const getUserList = getUsers();
     const { users } = await getUserList;
-    console.log(users);
     return (
         <>
             <div className='heading'>User</div>

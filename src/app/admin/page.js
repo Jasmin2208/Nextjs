@@ -1,9 +1,11 @@
 import React from 'react'
+// import { redirect } from 'next/navigation'
 
 function Admin() {
-  return (
-    <div className='heading'>Admin</div>
-  )
+    // redirect('/')
+    return (
+        <div className='heading'>Admin</div>
+    )
 }
 
 export default Admin
