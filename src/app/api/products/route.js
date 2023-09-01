@@ -5,8 +5,9 @@ import { Product } from "../../../utils/Models/productModel";
 
 export async function GET() {
     try {
+        let data = []
         await mongoose.connect(connectionToDB)
-        const data = await Product.find()
+        data = await Product.find()
         return NextResponse.json({ result: data, error: false })
     } catch (error) {
         return NextResponse.json({ result: error.message, error: true })
