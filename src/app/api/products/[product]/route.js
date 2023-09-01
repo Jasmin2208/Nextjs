@@ -23,3 +23,16 @@ export async function PUT(request, content) {
 
     return NextResponse.json({ result: "Product Update Successfully !", Product: data, error: false })
 }
+
+export async function DELETE(request, content) {
+    const id = content.params.product;
+    await mongoose.connect(connectionToDB)
+    let data = await Product.findByIdAndDelete({ _id: id })
+    console.log(data);
+
+    if (data) {
+        return NextResponse.json({ result: "Product Delete Successfully !!", error: false })
+    } else {
+        return NextResponse.json({ result: "Internal Error, Please Try After Some Time !", error: true })
+    }
+}

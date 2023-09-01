@@ -13,12 +13,27 @@ function Page() {
 
     const fetchProducts = async () => {
         const newProducts = await getProducts();
+        console.log(newProducts);
         setProducts(newProducts);
     };
+
+    const handleDelete = async (id) => {
+        let data = await fetch(`http://localhost:3000/api/products/${id}`, {
+            method: "DELETE",
+        })
+        data = await data.json()
+        if (data.error) {
+            alert(data.result)
+        } else {
+            alert(data.result)
+            fetchProducts()
+        }
+    }
 
     useEffect(() => {
         fetchProducts();
     }, []);
+
     return (
         <>
             <div className='heading'>Product List</div>
@@ -31,6 +46,7 @@ function Page() {
                     <Link href={`products/${p._id}`}>
                         <button>Edit</button>
                     </Link>
+                    <button onClick={() => handleDelete(p._id)}>Delete</button>
                 </div>
             ))}
         </>
