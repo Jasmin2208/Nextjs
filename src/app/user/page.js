@@ -17,13 +17,8 @@ async function page() {
             {
                 user.map((u) => {
                     return <div key={u.id}>
-                        <Link href={`user/${u.id}`}>{u.name}</Link>
+                        <Link href={`/user/${u.id}`}>{u.name}</Link> <a href={`/user/${u.id}/update`}>Edit</a>
                     </div>
-                    // return <div className='userDeatil'>
-                    //     <p><strong>Name: </strong>{u.name}</p>
-                    //     <p><strong>Age: </strong>{u.age}</p>
-                    //     <p><strong>Gender: </strong>{u.gender}</p>
-                    // </div>
                 })
             }
         </>
