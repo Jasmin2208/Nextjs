@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
         <h5><Link href='/products'>Product List</Link></h5>
         <h5><Link href='/user'>User page</Link></h5>
         <h5><Link href='/adduser'>Create User page</Link></h5>
+        <h5><Link href='/image'>Insert Image</Link></h5>
         <br />
         <br />
         {children}
