@@ -16,6 +16,8 @@ export default function RootLayout({ children }) {
         <h5><Link href='/'>Home page</Link></h5>
         <h5><Link href='/api/hello'>Hello page</Link></h5>
         <h5><Link href='/api/user'>User API data page</Link></h5>
+        <h5><Link href='/api/products'>Product API data page</Link></h5>
+        <h5><Link href='/addproduct'>Add Product</Link></h5>
         <h5><Link href='/user'>User page</Link></h5>
         <h5><Link href='/adduser'>Create User page</Link></h5>
         <br />
