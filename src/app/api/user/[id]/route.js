@@ -14,3 +14,12 @@ export async function PUT(request, content) {
     }
     return NextResponse.json({ result: "User Update Successfully !", data: payload, error: false })
 }
+
+export async function DELETE(request, content) {
+    const id = content.params.id;
+    if (id) {
+        return NextResponse.json({ result: "User Delete Successfully !!", error: false })
+    } else {
+        return NextResponse.json({ result: "Internal Error, Please Try After Some Time !", error: true })
+    }
+}
